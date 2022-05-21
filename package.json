@@ -3,10 +3,11 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/fgranvik"
   },  
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "component library",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "publish": "npm publish --userconfig ~/.npmrc-private-reg"
   },
   "author": "Fredrik Granvik",
   "license": "ISC",

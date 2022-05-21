@@ -1,0 +1,41 @@
+{
+  "name": "@fgranvik/components",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/fgranvik"
+  },  
+  "version": "1.0.0",
+  "description": "component library",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "author": "Fredrik Granvik",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/react": "^18.0.9",
+    "react": "^18.1.0",
+    "rollup": "^2.74.1",
+    "rollup-plugin-dts": "^4.2.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://fgranvik@github.com/fgranvik/components.git"
+  },
+  "keywords": [
+    "components"
+  ],
+  "bugs": {
+    "url": "https://github.com/fgranvik/components/issues"
+  },
+  "homepage": "https://github.com/fgranvik/components#readme",
+}

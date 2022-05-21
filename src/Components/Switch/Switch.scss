@@ -1,0 +1,42 @@
+.switch {
+  background-color: #ddd;
+  font-weight: bold;
+  display: inline-block;
+  width: 48px;
+  border-radius: 25px;
+  box-shadow: 0 0 1px 0 #000;
+  position: relative;
+
+  &.disabled {
+    border-color: #ccc;
+    color: #ccc;
+  }
+
+  &.small {
+    font-size: 1.2rem;
+  }
+  &.medium {
+    font-size: 2rem;
+  }
+  &.large {
+    font-size: 2.4rem;
+  }
+
+  .knob {
+    border-radius: 50%;
+    background-color: #fff;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .state {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+}

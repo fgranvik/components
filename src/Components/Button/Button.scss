@@ -1,0 +1,36 @@
+.button {
+  padding: 8px 16px;
+  border-radius: 35px;
+  display: block;
+  background-color: transparent;
+  border: 2px solid #ab0254;
+  color: #ab0254;
+  font-weight: bold;
+
+  &:disabled {
+    border-color: #ccc;
+    color: #ccc;
+  }
+
+  &.small {
+    font-size: 1.2rem;
+  }
+  &.medium {
+    font-size: 2rem;
+  }
+  &.large {
+    font-size: 2.4rem;
+  }
+
+  &.inactive {
+    background-color: #ccc;
+  }
+
+  &:hover {
+  }
+
+  &.secondary {
+    background-color: #ab0254;
+    color: #fff;
+  }
+}

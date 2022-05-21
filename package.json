@@ -2,8 +2,8 @@
   "name": "@fgranvik/components",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/fgranvik"
-  },  
-  "version": "1.0.2",
+  },
+  "version": "1.0.3",
   "description": "component library",
   "scripts": {
     "rollup": "rollup -c",

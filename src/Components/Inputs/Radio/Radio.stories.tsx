@@ -1,13 +1,13 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button";
+import Radio from "./Radio";
 
 export default {
-  title: "Components/Button",
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: "Components/Inputs/Radio",
+  component: Radio,
+} as ComponentMeta<typeof Radio>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Radio> = (args) => <Radio />;
 
 export const Primary = Template.bind({});
 

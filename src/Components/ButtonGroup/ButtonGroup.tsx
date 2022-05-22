@@ -1,8 +1,8 @@
 import React from "react";
-import "./Button.scss";
+import "./ButtonGroup.scss";
 
-export interface ButtonProps {
-  label: string;
+export interface ButtonGroupProps {
+  label?: string;
   secondary?: boolean;
   size?: "xSmall" | "small" | "medium" | "large" | "xLarge";
   disabled?: boolean;
@@ -10,7 +10,7 @@ export interface ButtonProps {
   other?: any;
 }
 
-const Button = (props: ButtonProps) => {
+const ButtonGroup = (props: ButtonGroupProps) => {
   const buttonType = props.secondary ? "secondary" : "primary";
 
   return (
@@ -24,4 +24,4 @@ const Button = (props: ButtonProps) => {
   );
 };
 
-export default Button;
+export default ButtonGroup;

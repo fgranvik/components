@@ -7,21 +7,6 @@
   box-shadow: 0 0 1px 0 #000;
   position: relative;
 
-  &.disabled {
-    border-color: #ccc;
-    color: #ccc;
-  }
-
-  &.small {
-    font-size: 1.2rem;
-  }
-  &.medium {
-    font-size: 2rem;
-  }
-  &.large {
-    font-size: 2.4rem;
-  }
-
   .knob {
     border-radius: 50%;
     background-color: #fff;
@@ -31,6 +16,29 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  // States
+
+  &.disabled {
+    border-color: #ccc;
+    color: #ccc;
+  }
+
+  &.small {
+    width: 24px;
+
+    .knob {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  &.medium {
+    font-size: 2rem;
+  }
+  &.large {
+    font-size: 2.4rem;
   }
 
   .state {

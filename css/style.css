@@ -1,0 +1,69 @@
+.button {
+  padding: 8px 16px;
+  border-radius: 35px;
+  display: block;
+  background-color: transparent;
+  border: 2px solid #ab0254;
+  color: #ab0254;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button:disabled {
+  border-color: #ccc;
+  color: #ccc;
+}
+.button.small {
+  font-size: 1.2rem;
+}
+.button.medium {
+  font-size: 2rem;
+}
+.button.large {
+  font-size: 2.4rem;
+}
+.button.inactive {
+  background-color: #ccc;
+}
+.button.secondary {
+  background-color: #ab0254;
+  color: #fff;
+}
+
+.switch {
+  background-color: #ddd;
+  font-weight: bold;
+  display: inline-block;
+  width: 48px;
+  border-radius: 25px;
+  box-shadow: 0 0 1px 0 #000;
+  position: relative;
+}
+.switch.disabled {
+  border-color: #ccc;
+  color: #ccc;
+}
+.switch.small {
+  font-size: 1.2rem;
+}
+.switch.medium {
+  font-size: 2rem;
+}
+.switch.large {
+  font-size: 2.4rem;
+}
+.switch .knob {
+  border-radius: 50%;
+  background-color: #fff;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.switch .state {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}

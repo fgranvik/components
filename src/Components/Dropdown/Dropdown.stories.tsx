@@ -1,13 +1,13 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button";
+import Dropdown from "./Dropdown";
 
 export default {
-  title: "Components/Button",
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: "Components/Dropdown",
+  component: Dropdown,
+} as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown />;
 
 export const Primary = Template.bind({});
 

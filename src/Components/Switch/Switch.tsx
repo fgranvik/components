@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Switch.scss";
 
 export interface SwitchProps {
+  name: string;
   state: boolean;
   disabled?: boolean;
   size?: "small" | "medium" | "large";
@@ -18,19 +19,18 @@ const Switch = (props: SwitchProps) => {
   };
 
   return (
-    <div className={["switch", props.size, state, disabled].join(" ")}>
+    <div
+      className={["switch", props.size, state, disabled].join(" ")}
+      onClick={() => toggleState()}
+    >
       <input
         className="state"
-        id={`switch`}
         type="checkbox"
+        id={props.name}
         value={state}
         disabled={props.disabled ? true : false}
       />
-      <label
-        className="knob"
-        htmlFor={`switch`}
-        onClick={() => toggleState()}
-      />
+      <label className="knob" htmlFor={props.name} />
     </div>
   );
 };

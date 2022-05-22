@@ -5,7 +5,7 @@ export interface SwitchProps {
   name: string;
   label?: string;
   onChange?: Function;
-  checked: boolean;
+  checked?: boolean;
   disabled?: boolean;
   value?: string | number;
   size?: "small" | "medium" | "large";
@@ -14,11 +14,10 @@ export interface SwitchProps {
 
 const Switch = (props: SwitchProps) => {
   const disabled = props.disabled ? "disabled" : "";
-  const test = props.checked ? "true" : "false";
 
   return (
     <label
-      className={["switch", props.size, test, disabled].join(" ")}
+      className={["switch", props.size, disabled].join(" ")}
       htmlFor={props.name}
     >
       <input

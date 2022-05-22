@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 
   // States
 
@@ -12,16 +12,33 @@
   }
 
   &.small {
-    width: 24px;
+    font-size: 1.2rem;
 
     .knob {
-      height: 12px;
-      width: 12px;
+      width: 2.4rem;
+      height: 1.4rem;
+
+      &:before {
+        height: 8px;
+        width: 9px;
+        margin: 1px;
+      }
     }
   }
 
   &.medium {
-    font-size: 2rem;
+    font-size: 1.6rem;
+
+    .knob {
+      width: 3.2rem;
+      height: 1.9rem;
+
+      &:before {
+        height: 13px;
+        width: 13px;
+        margin: 1px;
+      }
+    }
   }
   &.large {
     font-size: 2.4rem;
@@ -30,9 +47,9 @@
   .knob {
     appearance: none;
     outline: none;
-    width: 4.8rem;
-    height: 2.4rem;
-    border-radius: 2.4rem;
+    width: 4.1rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
     position: relative;
     border: 2px solid mediumvioletred;
     margin-right: 0.8rem;
@@ -46,14 +63,13 @@
       height: 17px;
       width: 17px;
       position: absolute;
-      left: 2px;
-      top: 1px;
+      margin: 2px;
       transition: transform 300ms;
     }
 
     &:checked {
       &::before {
-        transform: translateX(23px);
+        transform: translateX(100%);
       }
     }
   }

@@ -1,22 +1,49 @@
 .button {
-  padding: 0.8rem 2.4rem;
   border-radius: 35px;
-  display: block;
-  background-color: transparent;
-  border: 2px solid #ab0254;
-  color: #ab0254;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  color: mediumvioletred;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  font-weight: bold;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -3px;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 0, 138, 1) 0%,
+      rgba(255, 162, 0, 1) 100%
+    );
+  }
 
   //  States
   &:disabled {
-    border-color: #ccc;
     color: #ccc;
+    &:before {
+      background: #ccc;
+    }
   }
 
+  &:hover {
+    &:before {
+      background: rgba(255, 0, 138, 1);
+    }
+  }
   // Properties
   &.xSmall {
     font-size: 1rem;
-    font-weight: normal;
     padding: 0.4rem 1.4rem;
   }
   &.small {
@@ -29,9 +56,11 @@
   }
   &.large {
     font-size: 2rem;
+    padding: 0.6rem 2.4rem;
   }
   &.xLarge {
     font-size: 2.4rem;
+    padding: 0.6rem 2.4rem;
   }
 
   &.inactive {
@@ -39,7 +68,7 @@
   }
 
   &.secondary {
-    background-color: #ab0254;
+    background: transparent;
     color: #fff;
   }
 }

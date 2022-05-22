@@ -1,22 +1,8 @@
 .switch {
-  background-color: #ddd;
-  font-weight: bold;
-  display: inline-block;
-  width: 48px;
-  border-radius: 25px;
-  box-shadow: 0 0 1px 0 #000;
-  position: relative;
-
-  .knob {
-    border-radius: 50%;
-    background-color: #fff;
-    height: 24px;
-    width: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.4rem;
 
   // States
 
@@ -41,10 +27,34 @@
     font-size: 2.4rem;
   }
 
-  .state {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-    position: absolute;
+  .knob {
+    appearance: none;
+    outline: none;
+    width: 4.8rem;
+    height: 2.4rem;
+    border-radius: 2.4rem;
+    position: relative;
+    border: 2px solid mediumvioletred;
+    margin-right: 0.8rem;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      background-color: mediumvioletred;
+      height: 17px;
+      width: 17px;
+      position: absolute;
+      left: 2px;
+      top: 1px;
+      transition: transform 300ms;
+    }
+
+    &:checked {
+      &::before {
+        transform: translateX(23px);
+      }
+    }
   }
 }

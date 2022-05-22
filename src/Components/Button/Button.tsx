@@ -3,11 +3,10 @@ import "./Button.scss";
 
 export interface ButtonProps {
   label: string;
+  size: "xSmall" | "small" | "medium" | "large" | "xLarge";
   secondary?: boolean;
-  size?: "xSmall" | "small" | "medium" | "large" | "xLarge";
   disabled?: boolean;
-  style?: any;
-  other?: any;
+  styles?: any;
 }
 
 const Button = (props: ButtonProps) => {
@@ -17,7 +16,7 @@ const Button = (props: ButtonProps) => {
     <button
       disabled={props.disabled ? true : false}
       className={["button", buttonType, props.size].join(" ")}
-      style={props.style}
+      {...props.styles}
     >
       {props.label}
     </button>

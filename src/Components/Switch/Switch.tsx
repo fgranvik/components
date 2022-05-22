@@ -3,35 +3,35 @@ import "./Switch.scss";
 
 export interface SwitchProps {
   name: string;
-  state: boolean;
+  label?: string;
+  onChange?: Function;
+  checked: boolean;
   disabled?: boolean;
+  value?: string | number;
   size?: "small" | "medium" | "large";
+  style?: any;
 }
 
 const Switch = (props: SwitchProps) => {
-  // const [state, setState] = useState(props.state)
-
-  const state = props.state ? "true" : "false";
   const disabled = props.disabled ? "disabled" : "";
-
-  const toggleState = () => {
-    debugger;
-  };
+  const test = props.checked ? "true" : "false";
 
   return (
-    <div
-      className={["switch", props.size, state, disabled].join(" ")}
-      onClick={() => toggleState()}
+    <label
+      className={["switch", props.size, test, disabled].join(" ")}
+      htmlFor={props.name}
     >
       <input
-        className="state"
+        style={props.style}
+        className="knob"
         type="checkbox"
         id={props.name}
-        value={state}
+        defaultChecked={props.checked}
         disabled={props.disabled ? true : false}
+        value={props.value}
       />
-      <label className="knob" htmlFor={props.name} />
-    </div>
+      {props.label}
+    </label>
   );
 };
 

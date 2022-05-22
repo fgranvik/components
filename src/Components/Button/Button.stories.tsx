@@ -13,6 +13,5 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   label: "Button",
-  secondary: false,
-  disabled: false,
+  size: "medium",
 };
